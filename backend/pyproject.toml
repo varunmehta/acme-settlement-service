@@ -1,0 +1,25 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Acme settlement service take home prompt"
+authors = [
+    {name = "Varun Mehta",email = "varun.mehta.r@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard] (>=0.116.1,<0.117.0)",
+    "datamodel-code-generator (>=0.32.0,<0.33.0)",
+    "httpx (>=0.28.1,<0.29.0)",
+    "pytest (>=8.4.1,<9.0.0)",
+    "tenacity (>=9.1.2,<10.0.0)",
+    "python-dotenv (>=1.1.1,<2.0.0)",
+    "aioredis (>=2.0.1,<3.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "backend", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
